@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LFSample : MonoBehaviour
 {
-
-    private Renderer mouseColor; // All renderers inherit from Renderer. 
+    private Renderer mouseColor;
     public AudioSource audioSource;
+    
     private void Awake()
     {
         mouseColor = GetComponent<Renderer>();
@@ -21,16 +21,14 @@ public class LFSample : MonoBehaviour
     private void OnMouseDown()
     {
         mouseColor.material.color = Color.green;
+        
         audioSource = GetComponent<AudioSource>();
         audioSource.enabled = true;
         audioSource.Play();
+        
         Debug.Log("Audio is Playing");
+        
         return;
 
-    }
-
-    private void OnMouseExit()
-    {
-        mouseColor.material.color = Color.white;
     }
 }
