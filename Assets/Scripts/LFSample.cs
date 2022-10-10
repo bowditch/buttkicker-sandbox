@@ -11,6 +11,8 @@ public class LFSample : MonoBehaviour
     {
         mouseColor = GetComponent<Renderer>();
         mouseColor.material.color = Color.white;
+
+        Debug.Log("I am awake");
     }
 
     private void OnMouseEnter()
